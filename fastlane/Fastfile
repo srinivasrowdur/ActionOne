@@ -13,7 +13,10 @@ desc "Run Tests & Increase Build number"
     #scan(scheme: "ActionOne") # Name of the scema to be tested
     increment_build_number
     increment_version_number_in_xcodeproj
-    add_git_tag( tag: get_version_number_from_xcodeproj(scheme: "ActionOne", build_configuration_name: "Release"))
+    while (git_tag_exists(tag: "v"+get_version_number_from_xcodeproj(scheme: "ActionOne", build_configuration_name: "Release"), remote: true )) do
+      increment_version_number_in_xcodeproj
+    end
+    add_git_tag( tag: "v"+get_version_number_from_xcodeproj(scheme: "ActionOne", build_configuration_name: "Release"))
    # version =  get_version_number_from_xcodeproj(scheme: "ActionOne", build_configuration_name: "Release") 
    push_to_git_remote(
     remote: "origin",         # optional, default: "origin"
