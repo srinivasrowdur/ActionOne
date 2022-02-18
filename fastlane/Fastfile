@@ -1,7 +1,7 @@
 
 
 default_platform(:ios)
-
+platform :ios do
 desc "Run Tests & Increase Build number"
   lane :oncommit do
     scan(scheme: "ActionOne") # Name of the scema to be tested
@@ -37,16 +37,19 @@ desc "Run Tests & Increase Build number"
   lane :incrementpatch do
     increment_version_number_in_xcodeproj
   end
+
   desc "Increment minor version"
   lane :incrementminor do
     increment_version_number_in_xcodeproj(
       bump_type: 'minor' # Automatically increment minor version number
     )
   end
+
   desc "Increment Major version"
   lane :incrementmajor do
     increment_version_number_in_xcodeproj(
       bump_type: 'major' # Automatically increment major version number
     )
   end
+
 end
