@@ -13,8 +13,8 @@ desc "Run Tests & Increase Build number"
     #scan(scheme: "ActionOne") # Name of the scema to be tested
     increment_build_number
     increment_version_number_in_xcodeproj
-    add_git_tag( tag: "1.0.16")
-    #tag: get_version_number_from_plist(scheme: "ActionOne", build_configuration_name: "Release", plist_build_setting_support: true) 
+    add_git_tag( tag: get_version_number_from_xcodeproj(scheme: "ActionOne", build_configuration_name: "Release"))
+   # version =  get_version_number_from_xcodeproj(scheme: "ActionOne", build_configuration_name: "Release") 
      
   end
 
