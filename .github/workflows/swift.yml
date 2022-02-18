@@ -16,4 +16,4 @@ jobs:
       uses: maierj/fastlane-action@v2.1.0
       with:
           lane: onpatchmerge
-    - uses: stefanzweifel/git-auto-commit-action@v4
+ 
