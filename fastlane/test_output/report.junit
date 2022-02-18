@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='ActionOneUITests.xctest' tests='8' failures='0'>
+  <testsuite name='ActionOneTests.ActionOneTests' tests='2' failures='0'>
+    <testcase classname='ActionOneTests.ActionOneTests' name='testExample' time='0.003'/>
+    <testcase classname='ActionOneTests.ActionOneTests' name='testPerformanceExample' time='0.434'/>
+  </testsuite>
+  <testsuite name='ActionOneUITests.ActionOneUITests' tests='2' failures='0'>
+    <testcase classname='ActionOneUITests.ActionOneUITests' name='testExample' time='5.006'/>
+    <testcase classname='ActionOneUITests.ActionOneUITests' name='testLaunchPerformance' time='93.781'/>
+  </testsuite>
+  <testsuite name='ActionOneUITests.ActionOneUITestsLaunchTests' tests='4' failures='0'>
+    <testcase classname='ActionOneUITests.ActionOneUITestsLaunchTests' name='testLaunch' time='8.062'/>
+    <testcase classname='ActionOneUITests.ActionOneUITestsLaunchTests' name='testLaunch' time='8.472'/>
+    <testcase classname='ActionOneUITests.ActionOneUITestsLaunchTests' name='testLaunch' time='6.351'/>
+    <testcase classname='ActionOneUITests.ActionOneUITestsLaunchTests' name='testLaunch' time='6.622'/>
+  </testsuite>
+</testsuites>
