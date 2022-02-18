@@ -1,23 +1,52 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
 
 default_platform(:ios)
 
-platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+desc "Run Tests & Increase Build number"
+  lane :oncommit do
+    scan(scheme: "ActionOne") # Name of the scema to be tested
+    increment_build_number
+  end
+
+  desc "Run Tests & Increase Build number and update patch version number"
+  lane :onpatchmerge do
+    scan(scheme: "ActionOne") # Name of the scema to be tested
+    increment_build_number
+    increment_version_number_in_xcodeproj
+  end
+
+  desc "Run Tests & Increase Build number and update Minor version number"
+  lane :onminormerge do
+    scan(scheme: "ActionOne") # Name of the scema to be tested
+    increment_build_number
+    increment_version_number_in_xcodeproj(
+      bump_type: 'minor' # Automatically increment minor version number
+    )
+  end
+
+  desc "Run Tests & Increase Build number and update Major version number"
+  lane :onmajormerge do
+    scan(scheme: "ActionOne") # Name of the scema to be tested
+    increment_build_number
+    increment_version_number_in_xcodeproj(
+      bump_type: 'major' # Automatically increment major version number
+    )
+  end
+
+  desc "Increment patch version"
+  lane :incrementpatch do
+    increment_version_number_in_xcodeproj
+  end
+  desc "Increment minor version"
+  lane :incrementminor do
+    increment_version_number_in_xcodeproj(
+      bump_type: 'minor' # Automatically increment minor version number
+    )
+  end
+  desc "Increment Major version"
+  lane :incrementmajor do
+    increment_version_number_in_xcodeproj(
+      bump_type: 'major' # Automatically increment major version number
+    )
   end
 end
