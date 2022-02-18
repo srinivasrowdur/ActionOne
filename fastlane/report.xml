@@ -5,27 +5,27 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000477">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.063316">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: increment_build_number" time="1.49975">
+      <testcase classname="fastlane.lanes" name="1: increment_build_number" time="3.762163">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: increment_version_number_in_xcodeproj" time="3.228773">
+      <testcase classname="fastlane.lanes" name="2: increment_version_number_in_xcodeproj" time="6.365734">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: get_version_number_from_xcodeproj" time="2.992482">
+      <testcase classname="fastlane.lanes" name="3: get_version_number_from_xcodeproj" time="5.190934">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: add_git_tag" time="0.039553">
+      <testcase classname="fastlane.lanes" name="4: add_git_tag" time="0.064077">
         
       </testcase>
     
