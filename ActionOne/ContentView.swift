@@ -13,7 +13,7 @@ struct ContentView: View {
             .padding()
         Text("Hello, New World!") //fixed a spelling mistake
             .padding()
-        Text("Hello, New Workld!")
+        Text("Hello, New World!") //Fix second Mistake
             .padding()
 
         Text("Hello, Branch2")
